@@ -69,6 +69,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --colors $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias grep='grep --color=auto'
+alias tree-detailed -pugDhC --du
 alias vim='nvim'
 
 # Shell integrations
