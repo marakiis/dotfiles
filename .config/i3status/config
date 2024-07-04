@@ -15,7 +15,7 @@ order += "battery all"
 order += "disk /"
 order += "load"
 order += "volume master"
-order += "wireless wlo1"
+order += "wireless _first_"
 order += "tztime local"
 
 battery all {
@@ -54,7 +54,7 @@ volume master {
     mixer_idx = 0
 }
 
-wireless wlo1 {
+wireless _first_ {
   format_up = "W: (%quality at %essid, %bitrate) %ip"
     format_down = "W: down"
 }
