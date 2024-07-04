@@ -79,6 +79,9 @@ alias vim='nvim'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# i3lock
+alias lock="~/scripts/lock.sh"
+
 # Alacritty
 function alacritty_theme()
 {
@@ -96,5 +99,4 @@ function alacritty_theme()
       alacritty msg config "$(cat ${THEME_DIR}/${1}.toml)"
     fi
   }
-
 

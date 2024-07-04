@@ -75,6 +75,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# lock session
+bindsym $mod+Shift+x exec ~/scripts/lock.sh
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
