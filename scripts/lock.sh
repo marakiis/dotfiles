@@ -11,7 +11,7 @@ i3lock -n --force-clock -i ~/background/cloudbank.png \
   --ringver-color=$verif_color --ringwrong-color=$wrong_color --ring-color=$fg_color \
   --keyhl-color=$highlight_color --bshl-color=$highlight_color --separator-color=00000000 \
   --date-color=$fg_color --time-color=$fg_color --greeter-color=$fg_color \
-  --time-str="%H|%M" --time-size=40 \
+  --time-str="%H:%M" --time-size=40 \
   --date-str="%Y/%m/%d" --date-size=20 \
   --greeter-text="$date_now" --greeter-size=25 \
   --line-uses-inside --radius 75 --ring-width 2 --indicator \
