@@ -43,7 +43,7 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
+bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -70,10 +70,11 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --colors $realpath'
 # Aliases
 alias c='clear'
 alias ls='ls --color'
-alias grep='grep --color=auto'
+alias grep='rg'
 alias mkdir='mkdir -pv'
 alias tree-detailed='tree -pugDhC --du'
 alias vim='nvim'
+alias fvim='nvim $(fzf)'
 
 # Shell integrations
 eval "$(fzf --zsh)"
