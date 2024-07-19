@@ -83,21 +83,3 @@ eval "$(zoxide init --cmd cd zsh)"
 # i3lock
 alias lock="~/scripts/lock.sh"
 
-# Alacritty
-function alacritty_theme()
-{
-  THEME_DIR=~/.config/alacritty/themes
-  if [[ $1 == "" ]]; then
-    echo "available themes:"
-    for f in .config/alacritty/themes/*.toml; do if [[ -f ${f} ]]; then printf " - %s\n" ${${f##*/}%%.*}; fi; done;
-    else if
-      if [[ ! -f ${THEME_DIR}/${1}.toml ]]; then
-        echo "cannot access ${THEME_DIR}/${1}.toml" 
-        echo "available themes:"
-        for f in .config/alacritty/themes/*.toml; do if [[ -f ${f} ]]; then printf " - %s\n" ${${f##*/}%%.*}; fi; done;
-          return 1
-      fi
-      alacritty msg config "$(cat ${THEME_DIR}/${1}.toml)"
-    fi
-  }
-
