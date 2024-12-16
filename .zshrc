@@ -7,6 +7,7 @@ fi
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin
 
 # Set the zinit home directory for zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -70,11 +71,12 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --colors $realpath'
 # Aliases
 alias c='clear'
 alias ls='ls --color'
-alias grep='rg'
+alias ll='ls -al'
 alias mkdir='mkdir -pv'
 alias tree-detailed='tree -pugDhC --du'
 alias vim='nvim'
 alias fvim='nvim $(fzf)'
+alias ntmux='tmux new -s $(basename $(pwd))'
 
 # Shell integrations
 eval "$(fzf --zsh)"
